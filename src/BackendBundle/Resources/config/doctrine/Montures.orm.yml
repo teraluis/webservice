@@ -1,0 +1,100 @@
+BackendBundle\Entity\Montures:
+    type: entity
+    table: montures
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: true
+            length: 145
+            options:
+                fixed: false
+        ref:
+            type: string
+            nullable: true
+            length: 145
+            options:
+                fixed: false
+        description:
+            type: string
+            nullable: true
+            length: 445
+            options:
+                fixed: false
+        cible:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        prix:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        shoote:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        pola:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        matiere:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        couleur:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        fitingbox:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        forme:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        sousfamille:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        taille:
+            type: string
+            nullable: true
+            length: 245
+            options:
+                fixed: false
+        date:
+            type: datetime
+            nullable: true
+            options:
+                default: CURRENT_TIMESTAMP
+        entreecollection:
+            type: date
+            nullable: true
+    lifecycleCallbacks: {  }

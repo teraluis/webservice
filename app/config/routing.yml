@@ -1,0 +1,12 @@
+backend:
+    resource: "@BackendBundle/Resources/config/routing.yml"
+    prefix:   /montures
+backend_revendeurs:
+    resource: "@BackendBundle/Resources/config/revendeurs.yml"
+    prefix:   /revendeurs
+backend_utilisateurs:
+    resource: "@BackendBundle/Resources/config/utilisateurs.yml"
+    prefix:   /utilisateurs   
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,99 @@
+BackendBundle\Entity\Utilisateur:
+    type: entity
+    table: utilisateur
+    id:
+        idutilisateur:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        role:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        prenom:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        nom:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        pseudonyme:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        mail:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        telephone:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        rue:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        postalCode:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+            column: postal_code
+        pays:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        identifiant:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        motdepasse:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        dateCreation:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: date_creation
+        dateModification:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: date_modification
+        favoris:
+            type: string
+            nullable: true
+            length: 245
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

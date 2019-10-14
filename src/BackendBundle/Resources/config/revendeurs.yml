@@ -1,0 +1,8 @@
+revendeur_all:
+    path:     /all
+    defaults: { _controller: BackendBundle:Revendeur:all }
+    methods: GET
+user_geolocalisation:
+    path:     /geolocalisation
+    defaults: { _controller: BackendBundle:Revendeur:geoloc }
+    methods: GET    

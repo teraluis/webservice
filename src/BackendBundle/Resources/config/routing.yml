@@ -1,0 +1,36 @@
+backend_homepage:
+    path:     /
+    defaults: { _controller: BackendBundle:Default:index }
+backend_name:
+    path:     /name
+    defaults: { _controller: BackendBundle:Default:name }
+    methods: GET
+backend_couleurs:
+    path:     /couleurs
+    defaults: { _controller: BackendBundle:Default:couleurs }
+    methods: GET
+backend_ref:
+    path:     /ref
+    defaults: { _controller: BackendBundle:Default:ref }
+    methods: GET
+backend_forme:
+    path:     /forme/{forme}
+    defaults: { _controller: BackendBundle:Default:forme, forme:null }
+    methods: GET
+backend_famille:
+    path:     /famille/{famille}
+    defaults: { _controller: BackendBundle:Default:famille, famille:null }
+    methods: GET
+backend_sexe:
+    path:     /sexe/{sexe}
+    defaults: { _controller: BackendBundle:Default:sexe, sexe:null }
+    methods: GET
+backend_matiere:
+    path:     /matiere/{matiere}
+    defaults: { _controller: BackendBundle:Default:matiere, matiere:null }
+    methods: GET   
+backend_nameall:
+    path:     /nameall/{nameall}
+    defaults: { _controller: BackendBundle:Default:nameall,nameall : null }
+    methods: GET
+

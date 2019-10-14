@@ -1,0 +1,344 @@
+<?php
+
+namespace BackendBundle\Entity;
+
+/**
+ * Revendeurs
+ */
+class Revendeurs
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $cardcode;
+
+    /**
+     * @var string
+     */
+    private $rue;
+
+    /**
+     * @var string
+     */
+    private $postalCode;
+
+    /**
+     * @var string
+     */
+    private $ville;
+
+    /**
+     * @var string
+     */
+    private $telephone;
+
+    /**
+     * @var string
+     */
+    private $latitude;
+
+    /**
+     * @var string
+     */
+    private $longitude;
+
+    /**
+     * @var string
+     */
+    private $pays;
+
+    /**
+     * @var string
+     */
+    private $gps;
+
+    /**
+     * @var boolean
+     */
+    private $actif = '1';
+
+    /**
+     * @var string
+     */
+    private $siteWeb;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set cardcode
+     *
+     * @param string $cardcode
+     *
+     * @return Revendeurs
+     */
+    public function setCardcode($cardcode)
+    {
+        $this->cardcode = $cardcode;
+
+        return $this;
+    }
+
+    /**
+     * Get cardcode
+     *
+     * @return string
+     */
+    public function getCardcode()
+    {
+        return $this->cardcode;
+    }
+
+    /**
+     * Set rue
+     *
+     * @param string $rue
+     *
+     * @return Revendeurs
+     */
+    public function setRue($rue)
+    {
+        $this->rue = $rue;
+
+        return $this;
+    }
+
+    /**
+     * Get rue
+     *
+     * @return string
+     */
+    public function getRue()
+    {
+        return $this->rue;
+    }
+
+    /**
+     * Set postalCode
+     *
+     * @param string $postalCode
+     *
+     * @return Revendeurs
+     */
+    public function setPostalCode($postalCode)
+    {
+        $this->postalCode = $postalCode;
+
+        return $this;
+    }
+
+    /**
+     * Get postalCode
+     *
+     * @return string
+     */
+    public function getPostalCode()
+    {
+        return $this->postalCode;
+    }
+
+    /**
+     * Set ville
+     *
+     * @param string $ville
+     *
+     * @return Revendeurs
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return string
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * Set telephone
+     *
+     * @param string $telephone
+     *
+     * @return Revendeurs
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * Get telephone
+     *
+     * @return string
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * Set latitude
+     *
+     * @param string $latitude
+     *
+     * @return Revendeurs
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+
+        return $this;
+    }
+
+    /**
+     * Get latitude
+     *
+     * @return string
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * Set longitude
+     *
+     * @param string $longitude
+     *
+     * @return Revendeurs
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+
+        return $this;
+    }
+
+    /**
+     * Get longitude
+     *
+     * @return string
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * Set pays
+     *
+     * @param string $pays
+     *
+     * @return Revendeurs
+     */
+    public function setPays($pays)
+    {
+        $this->pays = $pays;
+
+        return $this;
+    }
+
+    /**
+     * Get pays
+     *
+     * @return string
+     */
+    public function getPays()
+    {
+        return $this->pays;
+    }
+
+    /**
+     * Set gps
+     *
+     * @param string $gps
+     *
+     * @return Revendeurs
+     */
+    public function setGps($gps)
+    {
+        $this->gps = $gps;
+
+        return $this;
+    }
+
+    /**
+     * Get gps
+     *
+     * @return string
+     */
+    public function getGps()
+    {
+        return $this->gps;
+    }
+
+    /**
+     * Set actif
+     *
+     * @param boolean $actif
+     *
+     * @return Revendeurs
+     */
+    public function setActif($actif)
+    {
+        $this->actif = $actif;
+
+        return $this;
+    }
+
+    /**
+     * Get actif
+     *
+     * @return boolean
+     */
+    public function getActif()
+    {
+        return $this->actif;
+    }
+
+    /**
+     * Set siteWeb
+     *
+     * @param string $siteWeb
+     *
+     * @return Revendeurs
+     */
+    public function setSiteWeb($siteWeb)
+    {
+        $this->siteWeb = $siteWeb;
+
+        return $this;
+    }
+
+    /**
+     * Get siteWeb
+     *
+     * @return string
+     */
+    public function getSiteWeb()
+    {
+        return $this->siteWeb;
+    }
+}

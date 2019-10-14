@@ -1,0 +1,88 @@
+BackendBundle\Entity\Revendeurs:
+    type: entity
+    table: revendeurs
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        cardcode:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        nomBoutique:
+            type: string
+            nullable: true
+            length: 145
+            options:
+                fixed: false
+            column: nom_boutique
+        rue:
+            type: string
+            nullable: true
+            length: 245
+            options:
+                fixed: false
+        postalCode:
+            type: string
+            nullable: true
+            length: 145
+            options:
+                fixed: false
+            column: postal_code
+        ville:
+            type: string
+            nullable: true
+            length: 145
+            options:
+                fixed: false
+        telephone:
+            type: string
+            nullable: true
+            length: 145
+            options:
+                fixed: false
+        latitude:
+            type: string
+            nullable: true
+            length: 145
+            options:
+                fixed: false
+        longitude:
+            type: string
+            nullable: true
+            length: 145
+            options:
+                fixed: false
+        pays:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        gps:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        actif:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+        siteWeb:
+            type: string
+            nullable: true
+            length: 145
+            options:
+                fixed: false
+            column: site_web
+    lifecycleCallbacks: {  }

@@ -1,0 +1,5 @@
+user_new:
+    path:     /all
+    defaults: { _controller: BackendBundle:User:all }
+    methods: GET
+    
