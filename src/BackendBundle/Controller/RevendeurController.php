@@ -17,14 +17,19 @@ class RevendeurController extends Controller {
 
     public function allAction()
     {
+        $latitude=47.0780911;
+        $longitude=2.3632841;
         $em = $this->getDoctrine()->getManager();
+        $dql = "SELECT m FROM BackendBundle:Revendeurs m where m.pays LIKE '%FR%' ";
         $revendeurs= $em->getRepository('BackendBundle:Revendeurs')->findAll();
+        $query= $em->createQuery($dql);
+        $revendeurs= $query->getResult();
         $geojson =array("type" => "FeatureCollection",
             "features"=>array()
         );
         foreach($revendeurs as $revendeur ){
             //$point = new \GeoJson\Geometry\Point([floatval($revendeur->getLongitude()), floatval($revendeur->getLatitude())]);
-
+            
             $propeties = array(
                 "geometry" => array("type" => "Point" , "coordinates" => array(floatval($revendeur->getLongitude()), floatval($revendeur->getLatitude())) ),
                 "type" => "Feature",
@@ -35,7 +40,8 @@ class RevendeurController extends Controller {
                     "postal_code" => $revendeur->getPostalCode(),
                     "ville" => $revendeur->getVille(),
                     "telephone" => $revendeur->getTelephone(),
-                    "pays" => $revendeur->getPays()
+                    "pays" => $revendeur->getPays(),
+                    "distance" =>$this->distance($latitude,$longitude,$revendeur->getLatitude(),$revendeur->getLongitude(),'K')
                 ) 
             );            
             array_push($geojson["features"],$propeties);
