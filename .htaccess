@@ -1,0 +1,49 @@
+# BEGIN WordPress
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteBase /
+
+RewriteRule ^index\.php$ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule . /index.php [L]
+
+</IfModule>
+
+
+
+#<FilesMatch "\.(js)$">
+
+<IfModule mod_headers.c>
+
+    Header set Access-Control-Allow-Origin "*"
+
+    Header always add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+
+    Header always add Access-Control-Allow-Headers: "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,C$"
+
+    Header always add Access-Control-Allow-Credentials true
+
+# Force to request 200 for options
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_METHOD} OPTIONS
+
+RewriteRule .* / [R=200,L]
+
+</IfModule>
+
+#</FilesMatch>
+
+
+
+
+
+# END WordPress
