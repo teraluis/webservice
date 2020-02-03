@@ -56,7 +56,7 @@ class DefaultController extends Controller
         $dql .= " OR m.couleur = '".$couleur4."' OR m.couleur = '".$couleur5."' OR m.couleur = '".$couleur6."' ";
         $dql .= " OR m.couleur = '".$couleur7."' OR m.couleur = '".$couleur8."' OR m.couleur = '".$couleur9."' ";
         $dql .= " OR m.couleur = '".$couleur10."' OR m.couleur = '".$couleur11."' OR m.couleur = '".$couleur12."' ";
-        $dql .= " OR m.couleur = '".$couleur13."' OR m.couleur = '".$couleur14."' OR m.couleur = '".$couleur15."' OR m.couleur = '".$couleur15."' ";
+        $dql .= " OR m.couleur = '".$couleur13."' OR m.couleur = '".$couleur14."' OR m.couleur = '".$couleur15."' OR m.couleur = '".$couleur16."' ";
         $dql.= "order by m.id ASC";
         $query= $em->createQuery($dql);
         //$query->setMaxResults(40);

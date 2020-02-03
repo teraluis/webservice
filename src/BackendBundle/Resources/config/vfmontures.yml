@@ -1,0 +1,8 @@
+vfmontures_homme:
+    path:     /
+    defaults: { _controller: BackendBundle:Vfmonture:index }
+    methods: GET
+vfmontures_all:
+    path:     /all
+    defaults: { _controller: BackendBundle:Vfmonture:all }
+    methods: GET    

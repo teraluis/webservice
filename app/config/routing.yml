@@ -4,6 +4,9 @@ backend:
 backend_revendeurs:
     resource: "@BackendBundle/Resources/config/revendeurs.yml"
     prefix:   /revendeurs
+backend_vfmontures:
+    resource: "@BackendBundle/Resources/config/vfmontures.yml"
+    prefix:   /vfmontures    
 backend_utilisateurs:
     resource: "@BackendBundle/Resources/config/utilisateurs.yml"
     prefix:   /utilisateurs   

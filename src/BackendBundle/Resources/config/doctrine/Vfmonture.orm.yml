@@ -1,0 +1,98 @@
+BackendBundle\Entity\Vfmonture:
+    type: entity
+    table: vfmonture
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        itemcode:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        cible:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+                default: F
+        shootee:
+            type: boolean
+            nullable: true
+            options:
+                default: '1'
+        virtualreality:
+            type: boolean
+            nullable: true
+            options:
+                default: '1'
+        polarise:
+            type: boolean
+            nullable: true
+            options:
+                default: '0'
+        matiere:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+                default: AT
+        couleur:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+                default: NOIR
+        forme:
+            type: string
+            nullable: true
+            length: 70
+            options:
+                fixed: false
+                default: CARRE
+        usage:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+                default: OPTIQUE
+        sortieCollection:
+            type: date
+            nullable: true
+            column: sortie_collection
+        dateCreation:
+            type: datetime
+            nullable: true
+            options:
+                default: CURRENT_TIMESTAMP
+            column: date_creation
+        taille:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        collection:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

@@ -341,4 +341,33 @@ class Revendeurs
     {
         return $this->siteWeb;
     }
+    /**
+     * @var string
+     */
+    private $nomBoutique;
+
+
+    /**
+     * Set nomBoutique
+     *
+     * @param string $nomBoutique
+     *
+     * @return Revendeurs
+     */
+    public function setNomBoutique($nomBoutique)
+    {
+        $this->nomBoutique = $nomBoutique;
+
+        return $this;
+    }
+
+    /**
+     * Get nomBoutique
+     *
+     * @return string
+     */
+    public function getNomBoutique()
+    {
+        return $this->nomBoutique;
+    }
 }
