@@ -44,24 +44,24 @@ class VfmontureController extends Controller {
         $usage = $params->usage;
         $em = $this->getDoctrine()->getManager();
         //requette
+        //echo date('Y-m-d'); die();
         $dql = "SELECT m FROM BackendBundle:Vfmonture m where (m.couleur = '".$couleur1."' OR m.couleur = '".$couleur2."' OR m.couleur = '".$couleur3."' ";
         $dql .= " OR m.couleur = '".$couleur4."' OR m.couleur = '".$couleur5."' OR m.couleur = '".$couleur6."' ";
         $dql .= " OR m.couleur = '".$couleur7."' OR m.couleur = '".$couleur8."' OR m.couleur = '".$couleur9."' ";
         $dql .= " OR m.couleur = '".$couleur10."' OR m.couleur = '".$couleur11."' OR m.couleur = '".$couleur12."' ";
         $dql .= " OR m.nom = '".$nom."'";
-        $dql .= " OR m.couleur = '".$couleur13."' OR m.couleur = '".$couleur14."' OR m.couleur = '".$couleur15."' OR m.couleur = '".$couleur16."'" ;
-        
-        
-        
+        $dql .= " OR m.couleur = '".$couleur13."' OR m.couleur = '".$couleur14."' OR m.couleur = '".$couleur15."' OR m.couleur = '".$couleur16."'" ;                        
         $dql .= " OR m.matiere = '".$matiere."'";
         $dql .= " OR m.forme = '".$forme."'";
         $dql .= " OR m.usage = '".$usage."')";
-        $dql .= " AND m.cible = '".$cible."'";
-        $dql .= " AND  m.sortieCollection < CURRENT_TIMESTAMP() ";
+        $dql .= " OR m.cible = '".$cible."'";
+        $dql .= " AND  m.sortieCollection <= '".date('Y-m-d')."'";
         $dql.= "order by m.itemcode ASC";
         $query= $em->createQuery($dql);
         //$query->setMaxResults(40);
         $monture= $query->getResult();
+//        var_dump($monture);
+//        die();
         return $this->json($monture);
     }
     public function allAction(){
